@@ -1,34 +1,77 @@
-# TypeScript & Styled Components Next.js example
+<br>
+<h2 align="center">👉 Zebrands Technical Interview 👈</h2>
+<p align="center">
+    <br>
+    <img src="https://img.shields.io/github/forks/santychuy/luuna-test?style=flat-square" alt="forks">
+    <img src="https://img.shields.io/github/issues/santychuy/luuna-test?style=flat-square" alt="issues">
+    <img src="https://img.shields.io/github/package-json/v/santychuy/luuna-test?style=flat-square" alt="version">
+    <img src="https://img.shields.io/github/license/santychuy/luuna-test?style=flat-square" alt="license">
+    <br>
+    <br>
+    <a href="#demo">Demo<a/> •
+    <a href="#descripción">Descripción<a/> •
+    <a href="#cómo-se-abordó-el-problema">¿Cómo se abordó el problema?<a/> •
+    <a href="#puntos-a-destacar">Puntos a destacar<a/> •
+    <a href="#tecnologías-usadas">Tecnologías usadas<a/> • <a href="#métodos-utilizados">Métodos utilizados<a/> • <a href="#puntos-a-mejorar">Puntos a mejorar<a/>
+<p/>
+<br>
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
+---
 
-## Preview
+## Demo
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+[Demo](https://backbone.vercel.app/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
+<br>
 
-## Deploy your own
+## Descripción
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Aplicación que nos ayuda hacer una busqueda de usuarios y repositorios públicos dentro de Github, con la ayuda de la API que nos proveen ellos.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components&project-name=with-typescript-styled-components&repository-name=with-typescript-styled-components)
+<br>
 
-## How to use it?
+## Cómo se abordó el problema
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- Pensar e ilustrar de una manera sencilla de cómo se ilustrará la aplicación para que sea amigable para el usuario que la vaya a utilizar.
 
-```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-styled-components-app
-# or
-yarn create next-app --example with-typescript-styled-components with-typescript-styled-components-app
-```
+- Teniendo la estructura básica de cómo se verá, se empieza a construir lo visual, empezando por la vista móvil hasta llegar a terminar la vista de escritorios.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Investigar sobre la API de Github para comenzar a traer datos que se vayan escribiendo en base a lo que pide el usuario, y por fortuna, se tiene un endpoint dedicado a traer datos dependiendo a lo que se le pase por medio de una variable.
 
-## Notes
+- Ya maquetando los datos traidos e ilustrandolos dentro de sus respectivos componentes, se hace un componente Switch para diferenciar el tipo de busqueda que se hará (usuario o repositorio) para poder hacerlo lo más sencillo posible la aplicación.
 
-This is an amalgamation of the 2 existing examples:
+- Por último se afinaron detalles de la aplicación para que sea más presentable y amigable (animaciones de los componentes, delay a la hora de escribir para no hacer fetch de los datos cada segundo, etc)
 
-- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+<br>
+
+## Puntos a destacar
+
+- Es responsivo a diferentes tamaños de pantalla
+- Animaciones suaves
+- Estructura sencilla de proyecto (acomodo de archivos)
+- Se hace un delay a la hora de se deja de escribir en el buscador para la traida de datos
+
+<br>
+
+## Tecnologías usadas
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Next.js (React)](https://nextjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Styled-Components](https://styled-components.com/)
+
+<br>
+
+## Métodos utilizados
+
+- Se utiliza **Prettier y Eslint** para el formateo y correciones que tengamos en el código que vayamos escribiendo, para **Eslint** se está utilizando las configuraciones de [**Airbnb**](https://www.npmjs.com/package/eslint-config-airbnb-typescript) y de [**Typescript**](https://github.com/typescript-eslint/typescript-eslint), para **Prettier** utilizo reglas que a mis gustos se me hacen lo mejor para el formateo de código.
+
+- Utilizamos **git-hooks** junto con la ayuda de [**husky**](https://www.npmjs.com/package/husky) para correr scripts durante ciertos eventos que vayamos definiendo en nuestro **package.json**, en este caso lo utilizamos para que corra ciertos scripts a la hora de cada **commit**
+
+<br>
+
+## Puntos a mejorar
+
+- Crear un tema para tener centralizado las constantes que tengan que ver con tamaño de fuentes de letra, colores, etc.
+- Agregar Unit Testing en la aplicación
