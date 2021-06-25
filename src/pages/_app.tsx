@@ -1,10 +1,11 @@
 import 'normalize.css';
 import '../styles/global.css';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import type { AppProps } from 'next/app';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import type { AppProps } from 'next/app';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { Toaster } from 'react-hot-toast';
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           title="Zebrands Technical Interview"
           description="Technical interview for Zebrands that the main goal is to search usernames or repositories from Github and retrieve a data"
         />
+        <Toaster position="top-center" />
         <Component {...pageProps} />
       </QueryClientProvider>
     </>

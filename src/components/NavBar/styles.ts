@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const NavBarContainer = styled.nav`
   display: flex;
@@ -11,7 +12,7 @@ export const NavBarContainer = styled.nav`
   }
 `;
 
-export const GithubIcon = styled.img`
+export const GithubIcon = styled(motion.img)`
   width: 30px;
   height: 30px;
   cursor: pointer;

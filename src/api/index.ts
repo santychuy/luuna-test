@@ -1,4 +1,5 @@
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 export const searchGithub = async (
   search: string,
@@ -10,6 +11,6 @@ export const searchGithub = async (
     );
     return data;
   } catch (e) {
-    throw new Error(e);
+    return toast.error('Llegaste al límite de llamadas a la API');
   }
 };
