@@ -1,0 +1,3 @@
+const Home = () => <h1>My page</h1>;
+
+export default Home;
