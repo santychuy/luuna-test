@@ -20,7 +20,7 @@
 
 ## Demo
 
-[Demo](https://backbone.vercel.app/)
+[Demo](https://luuna-technical-interview.vercel.app/)
 
 <br>
 
