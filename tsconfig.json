@@ -21,7 +21,9 @@
     "isolatedModules": true,
     "baseUrl": "./src",
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": ["components/*"],
+      "@/types": ["types/"],
+      "@/api": ["api/"]
     }
   },
   "exclude": ["node_modules"],
